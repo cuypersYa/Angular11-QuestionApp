@@ -1,0 +1,15 @@
+<p>question works!</p>
+
+<div *ngIf="questions" >
+    <ul>
+        <li *ngFor="let question of questions; let i = index">
+            <h2>{{i + 1 }}) {{question.q}}</h2>
+            <ul>
+                <li *ngFor="let answer of shuffle(question.answers); let ii = index">
+                    {{answer}}
+                    <span *ngIf="(results[i] == answer) " style="color:green"> {{results[i]}} het is juist !</span>
+                </li>
+            </ul>
+        </li>
+      </ul>
+</div>
