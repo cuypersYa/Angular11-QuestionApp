@@ -3,7 +3,15 @@
 <div *ngIf="questions" >
     <ul>
         <li *ngFor="let question of questions; let i = index">
-            <h2>{{i + 1 }}) {{question.q}}</h2>
+            <label id="example-radio-group-label"><h2>{{i + 1 }}) {{question.q}}</h2></label>
+            
+            <mat-radio-group aria-label="Select an option" >
+                <mat-radio-button *ngFor="let answer of shuffle(question.answers); let ii = index"
+                [value]="answer" >
+                {{answer}}
+                </mat-radio-button>
+            </mat-radio-group>
+              <div>Your favorite season is: {{anw1}}</div>
             <ul>
                 <li *ngFor="let answer of shuffle(question.answers); let ii = index">
                     {{answer}}

@@ -13,11 +13,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from "@angular/material/card";
+import { MatRadioModule } from "@angular/material/radio"
+
 /** custom */
 import { StartComponent } from './start/start.component';
 import { QuestionComponent } from './question/question.component';
 import { ResultComponent } from './result/result.component';
 import { UserComponent } from './user/user.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 
@@ -28,7 +31,8 @@ import { UserComponent } from './user/user.component';
     StartComponent,
     QuestionComponent,
     ResultComponent,
-    UserComponent
+    UserComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,8 @@ import { UserComponent } from './user/user.component';
     MatSidenavModule,
     MatToolbarModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
