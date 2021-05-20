@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from './question';
 import { QuestionService } from './question.service';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-question',
@@ -22,6 +21,7 @@ export class QuestionComponent implements OnInit {
     this.questionService.getQuestion()
     .subscribe(result => {
       this.questions = result ;
+      console.log('result', result)
       this.defineAnwsers(this.questions);
 
     });
@@ -51,7 +51,9 @@ export class QuestionComponent implements OnInit {
   
     return array;
   }
-
+  public answerValid(event: string){
+    console.log('questionComp', event);
+  }
   
 
 }

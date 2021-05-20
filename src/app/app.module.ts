@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 /** services */
 import { HttpClientModule } from '@angular/common/http';
@@ -21,6 +22,7 @@ import { QuestionComponent } from './question/question.component';
 import { ResultComponent } from './result/result.component';
 import { UserComponent } from './user/user.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { AnswerComponent } from './answer/answer.component';
 
 
 
@@ -32,7 +34,8 @@ import { DialogComponent } from './dialog/dialog.component';
     QuestionComponent,
     ResultComponent,
     UserComponent,
-    DialogComponent
+    DialogComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { DialogComponent } from './dialog/dialog.component';
     MatToolbarModule,
     MatCardModule,
     HttpClientModule,
-    MatRadioModule
+    MatRadioModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
