@@ -7,7 +7,7 @@
             
             <label id="example-radio-group-label"><h2>{{i + 1 }}) {{question.q}}</h2></label>
             
-            <app-answer [answers]="shuffle(question.answers)"
+            <app-answer [result]="question.valid" [answers]="shuffle(question.answers)" 
                 (change)="answerValid($event)">
             </app-answer>
             
@@ -21,3 +21,4 @@
         </li>
       </ul>
 </div>
+<app-dialog [valid]="valid" [counter]="counter"></app-dialog>

@@ -1,8 +1,7 @@
 <p>answer works!</p>
-<mat-radio-group aria-label="Select an option" [(ngModel)]="selected" (click)="select()">
+<mat-radio-group aria-label="Select an option" >
     <mat-radio-button *ngFor="let answer of answers; let ii = index"
-    [value]="answer" >
+    [value]="answer" (change)="select($event)">
     {{answer}}
     </mat-radio-button>
 </mat-radio-group>
-=> {{selected}}

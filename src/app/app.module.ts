@@ -14,7 +14,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from "@angular/material/card";
-import { MatRadioModule } from "@angular/material/radio"
+import { MatRadioModule } from "@angular/material/radio";
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 /** custom */
 import { StartComponent } from './start/start.component';
@@ -47,7 +49,8 @@ import { AnswerComponent } from './answer/answer.component';
     MatCardModule,
     HttpClientModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

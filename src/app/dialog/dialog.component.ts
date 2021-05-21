@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
+  @Input()
+  counter : number = 99;
+  @Input()
+  valid : boolean = false;
 
-  constructor() { }
+  path : string ="";
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
+    //this.path = "../../assets/img/"+this.image;
+    this.path = '../../assets/img/' + this.valid + '/' + this.counter +'.jpg'
   }
 
 }

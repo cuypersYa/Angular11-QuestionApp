@@ -9,18 +9,20 @@ export class AnswerComponent implements OnInit {
 
   @Input()
   answers : Array<string> = [];
+  @Input()
+  result: string = "";
 
   @Output()
-  change: EventEmitter<string> = new EventEmitter<string>();
+  change: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   selected : string= "";
 
   ngOnInit(){
-    //this.selected = this.answers[0];
   }
-  select(){
-    console.log('answer', this.selected)
-    this.change.emit(this.selected);
+  
+  select(event: any){
+    console.log('resutl = '+ this.result + ' anwser = '+event.value);
+    this.change.emit(this.result === event.value);
   }
 
 }
