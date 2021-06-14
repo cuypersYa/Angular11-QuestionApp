@@ -27,14 +27,17 @@ export class AnswerComponent implements OnInit {
   }
   
   select(event: any, question: number){
-    console.log('resutl = '+ this.result + ' anwser = '+event.value, event);
-    this.dialog.open(DialogComponent, {
-      data: {
-        anwser: (this.result === event.value).toString(),
-        question: question
-      }
-    });
-    this.change.emit(this.result === event.value);
+    if (event && question != 0){
+      console.log('resutl = '+ this.result + ' anwser = '+event.value, event);
+      this.dialog.open(DialogComponent, {
+        data: {
+          anwser: (this.result === event.value).toString(),
+          question: question
+        }
+      });
+      this.change.emit(this.result === event.value);
+    }
+    
   }
 
 }

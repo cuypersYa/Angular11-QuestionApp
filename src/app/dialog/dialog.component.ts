@@ -10,9 +10,11 @@ import { DialogData } from './dialog-data'
 export class DialogComponent implements OnInit {
   public path : string ="";
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
-    
-    this.path = '../../assets/img/' + data.anwser + '/' + data.question +'.jpeg'
+    if (data && data.anwser && data.question != 0){
+      this.path = '../../assets/img/' + data.anwser + '/' + data.question +'.jpeg'
     console.log('this.path', this.path)
+    }
+    
   }
   ngOnInit(){}
 }

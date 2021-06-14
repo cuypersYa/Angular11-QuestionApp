@@ -1,24 +1,101 @@
  [
         {
-            "q" : "wie ben ik?",
+            "q" : "Wat is de formule voor de voedingssnelheid van een freesmachine te bepalen?",
             "answers" : [
-                "yannick",
+                "f = Zn x n x fz (de voeding = het aantal tanden van de frees x met het toerental x de voeding per tand van de snijplaatjes)",
                 "aap",
                 "beer",
                 "vis"
             ],
-            "valid" : "yannick"
+            "valid" : "f = Zn x n x fz (de voeding = het aantal tanden van de frees x met het toerental x de voeding per tand van de snijplaatjes)"
     
         },
         {
-            "q" : "1234",
+            "q" : "Wat is het doel/ nut van een transformator?",
             "answers" : [
-                "5",
+                "Een transformator wordt gebruikt voor het verhogen/ verlagen van elektrische stromen of spanningen.",
                 "6",
                 "7",
                 "8"
             ],
-            "valid" : "5"
+            "valid" : "Een transformator wordt gebruikt voor het verhogen/ verlagen van elektrische stromen of spanningen."
+    
+        },
+        {
+            "q" : "Waarvoor gebruik je een kopvlakbeitel?",
+            "answers" : [
+                "Een kopvlakbeitel bestaat niet dit heet een ruwbeitel, hiermee vlak je de kop van je werkstuk.",
+                "e",
+                "f",
+                "g"
+            ],
+            "valid" : "Een kopvlakbeitel bestaat niet dit heet een ruwbeitel, hiermee vlak je de kop van je werkstuk."
+    
+        },
+        {
+            "q" : "Om de hoeveel graden verschuift de fase van een 3 fasige asynchrone motor?",
+            "answers" : [
+                "Om de 120°",
+                "e",
+                "f",
+                "g"
+            ],
+            "valid" : "Om de 120°"
+    
+        },
+        {
+            "q" : "Wat is een andere naam voor reciprozagen? Dit zijn zagen met een groot zaagblad die over en weer bewegen.",
+            "answers" : [
+                "Tijgerzaag",
+                "e",
+                "f",
+                "g"
+            ],
+            "valid" : "Tijgerzaag"
+    
+        },
+        {
+            "q" : "Welke soort lading heeft een elektron?",
+            "answers" : [
+                "Negatieve lading",
+                "e",
+                "f",
+                "g"
+            ],
+            "valid" : "Negatieve lading"
+    
+        },
+        {
+            "q" : "Wat gebeurt er met de stroom wanneer 3 lampen parallel geschakeld zijn?",
+            "answers" : [
+                "De stroom zal zich in 3 opsplitsen en de lading van de bron over elke lamp verdelen.",
+                "e",
+                "f",
+                "g"
+            ],
+            "valid" : "De stroom zal zich in 3 opsplitsen en de lading van de bron over elke lamp verdelen."
+    
+        },
+        {
+            "q" : "Je moet een werkstuk draaien op een lengte van 100mm. Je hebt een tolerantieveld van +0.1 en -0.2 geef de maximale en minimale maat van je werkstuk.",
+            "answers" : [
+                "Maximale maat = 100,1mm en minimale maat = 99,8mm",
+                "e",
+                "f",
+                "g"
+            ],
+            "valid" : "Maximale maat = 100,1mm en minimale maat = 99,8mm"
+    
+        },
+        {
+            "q" : "Vraagje voor Annelies : Wat is de officiele \\' Neefkes\\' dag?",
+            "answers" : [
+                "27/12",
+                "06/01",
+                "27/10",
+                "06/07"
+            ],
+            "valid" : "27/12"
     
         },
         {
