@@ -15,6 +15,7 @@ export class QuestionComponent implements OnInit {
   anw1 : string = "";
   valid: boolean=false;
   counter :number = 0;
+  score:number = 0;
 
   constructor( private questionService : QuestionService, public dialog: MatDialog) { }
 
@@ -56,7 +57,8 @@ export class QuestionComponent implements OnInit {
     return array;
   }
   public answerValid(event: boolean){
-    console.log('questionComp', event);
+    console.log('questionComp:'+ event+'=>',  (event? this.score+ 1 : this.score));
+    this.score = (event? this.score+ 1 : this.score);
     this.counter++;
     console.log('counter '+this.counter)
     this.openDialog(event,this.counter);

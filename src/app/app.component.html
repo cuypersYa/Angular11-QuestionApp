@@ -1,28 +1,31 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 <ng-container *ngIf="shouldRun">
-  <mat-toolbar class="header">
-    Header
-    <nav class="mdc-list">
-      <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="0" href="#">
-        <span class="mdc-list-item__text" routerLink="/start">Start</span>
+  <mat-toolbar class="header" >
+    
+    <nav class="mdc-list" style="text-align: center; margin: auto; " >
+      <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="0" href="/start" style="color:#fff;float: left;margin: 20px;">
+        <span class="mdc-list-item__text" routerLink="start">Start</span>
       </a>
-      <a class="mdc-list-item" href="#">
-        <span class="mdc-list-item__text" routerLink="/vragen">Vragen</span>
+      <h1 style="font-family: 'Indie Flower', cursive; float: left; margin: 20px;">Annelies & Benjamin</h1>
+      <a class="mdc-list-item" href="/vragen" style="color:#fff;float: left; margin: 20px;">
+        <span class="mdc-list-item__text" routerLink="vragen">Vragen</span>
       </a>
     </nav>
   </mat-toolbar>
 
   <mat-sidenav-container class="container">
     <mat-sidenav #sidenav mode="side" opened class="sidenav" >
-     sidebar
+     
      <app-user ></app-user>
     </mat-sidenav>
 
     <mat-sidenav-content class="content">
-      <router-outlet></router-outlet>
+      <router-outlet style="margin:20px"></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 
-  <mat-toolbar class="footer" style="clear: both;">Footer</mat-toolbar>
+  <mat-toolbar class="footer" style="clear: both;"></mat-toolbar>
 </ng-container>
 
 

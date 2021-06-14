@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogData } from '../dialog/dialog-data'; 
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-answer',
@@ -17,11 +20,20 @@ export class AnswerComponent implements OnInit {
 
   selected : string= "";
 
+  constructor(public dialog: MatDialog) {}
+
+
   ngOnInit(){
   }
   
-  select(event: any){
-    console.log('resutl = '+ this.result + ' anwser = '+event.value);
+  select(event: any, question: number){
+    console.log('resutl = '+ this.result + ' anwser = '+event.value, event);
+    this.dialog.open(DialogComponent, {
+      data: {
+        anwser: (this.result === event.value).toString(),
+        question: question
+      }
+    });
     this.change.emit(this.result === event.value);
   }
 

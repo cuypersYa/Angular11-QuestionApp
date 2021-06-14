@@ -16,8 +16,8 @@ const routes: Routes = [
   {
     path: 'resultaat',
     component: ResultComponent
-  } 
-  //{ path: '',   redirectTo: '/start', pathMatch: 'full' }
+  } ,
+  { path: '',   redirectTo: '/start', pathMatch: 'full' }
 ];
 
 @NgModule({

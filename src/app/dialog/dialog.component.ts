@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit, SimpleChanges } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { DialogData } from './dialog-data'
 
 @Component({
   selector: 'app-dialog',
@@ -6,19 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-  @Input()
-  counter : number = 99;
-  @Input()
-  valid : boolean = false;
-
-  path : string ="";
-  constructor() {
+  public path : string ="";
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
     
+    this.path = '../../assets/img/' + data.anwser + '/' + data.question +'.jpeg'
+    console.log('this.path', this.path)
   }
-
-  ngOnInit(): void {
-    //this.path = "../../assets/img/"+this.image;
-    this.path = '../../assets/img/' + this.valid + '/' + this.counter +'.jpg'
-  }
-
+  ngOnInit(){}
 }
